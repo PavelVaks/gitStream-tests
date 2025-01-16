@@ -9,7 +9,7 @@ automations:
   # Add a label that indicates how many minutes it will take to review the PR.
   check_case:
     if:
-      - {{ branch.name | includes(regex=r/(?i)pasha(?-i)-\d{4,}/) }}
+      - {{ branch.name | includes(regex=r/(?i)pasha-\d{4,}/) }}
     run:
       - action: add-label@v1
         args:
